@@ -3,6 +3,7 @@ import { useApp } from './stores/app'
 const router = createRouter({
   history: createWebHashHistory(),
   routes: [
+    { path: '/inicio', component: () => import('./views/Landing.vue'), meta: { cheia: true } },
     { path: '/login', component: () => import('./views/Login.vue') },
     { path: '/interesse', component: () => import('./views/Interesse.vue') },
     { path: '/', component: () => import('./views/Grupos.vue') },
@@ -16,7 +17,7 @@ const router = createRouter({
 })
 router.beforeEach((to) => {
   const app = useApp()
-  const publicas = ['/login', '/interesse']
-  if (!app.usuario && !publicas.includes(to.path)) return '/login'
+  const publicas = ['/inicio', '/login', '/interesse']
+  if (!app.usuario && !publicas.includes(to.path)) return '/inicio'
 })
 export default router
