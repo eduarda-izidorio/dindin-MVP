@@ -4,6 +4,7 @@ const router = createRouter({
   history: createWebHashHistory(),
   routes: [
     { path: '/login', component: () => import('./views/Login.vue') },
+    { path: '/interesse', component: () => import('./views/Interesse.vue') },
     { path: '/', component: () => import('./views/Grupos.vue') },
     { path: '/grupo/:id', component: () => import('./views/Grupo.vue'), children: [
       { path: '', component: () => import('./views/Painel.vue') },
@@ -15,6 +16,7 @@ const router = createRouter({
 })
 router.beforeEach((to) => {
   const app = useApp()
-  if (!app.usuario && to.path !== '/login') return '/login'
+  const publicas = ['/login', '/interesse']
+  if (!app.usuario && !publicas.includes(to.path)) return '/login'
 })
 export default router
