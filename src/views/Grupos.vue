@@ -33,11 +33,6 @@ function criar() {
         <input id="o" v-model="outros" class="form-control mb-3" placeholder="Ana, João, Bia" required />
         <button class="btn btn-dindin">Criar grupo</button>
       </form>
-      <div class="cartao mt-3" style="background:var(--menta)">
-        <h2 class="h6"><i class="bi bi-stars"></i> Em breve: viagens, festas e controle por mês</h2>
-        <p class="small mb-2">Quer usar o Dindin nessas situações? Entre na lista e avisamos você.</p>
-        <RouterLink to="/interesse" class="btn btn-sm btn-dindin">Quero ser avisado</RouterLink>
-      </div>
     </div>
   </div>
 </template>

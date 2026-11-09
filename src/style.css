@@ -5,6 +5,9 @@ body { background:#f6fbf8; color:var(--verde-esc); }
 .topo { background:var(--verde-esc); color:#fff; }
 .cartao { background:#fff; border:1px solid #d5ebe0; border-radius:12px; padding:1.25rem; }
 .positivo { color:var(--verde); font-weight:600; }
+.cartao-interesse { background:var(--menta); border-style:dashed; }
+.link-escuro { color:var(--verde-esc); font-weight:600; }
+.link-escuro:hover { color:var(--verde); }
 .negativo { color:var(--devendo); font-weight:600; }
 .abas { display:flex; flex-wrap:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none; }
 .abas::-webkit-scrollbar { display:none; }

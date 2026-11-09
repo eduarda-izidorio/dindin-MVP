@@ -37,7 +37,7 @@ async function entrar() {
       <button class="btn btn-dindin w-100" :disabled="enviando">{{ enviando ? 'Entrando...' : 'Testar a demo' }}</button>
     </form>
     <p class="small text-center mt-3 mb-0">
-      Quer usar em viagens, festas ou por mês? <RouterLink to="/interesse">Entre na lista de interessados</RouterLink>
+      Quer usar em viagens, festas ou por mês? <RouterLink to="/interesse" class="link-escuro">Entre na lista de interessados</RouterLink>
     </p>
   </div>
 </template>
