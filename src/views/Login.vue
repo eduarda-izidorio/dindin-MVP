@@ -17,7 +17,11 @@ async function entrar() {
 }
 </script>
 <template>
-  <div class="cartao mx-auto mt-5" style="max-width:400px">
+  <div class="mx-auto mt-5" style="max-width:400px">
+    <RouterLink to="/" class="link-escuro small text-decoration-none d-inline-block mb-2">
+      <i class="bi bi-arrow-left" aria-hidden="true"></i> Voltar para o início
+    </RouterLink>
+  <div class="cartao">
     <h1 class="h3"><RouterLink to="/" class="link-escuro text-decoration-none">Dindin</RouterLink></h1>
     <p>Divida as contas da casa, da república ou da viagem sem planilha.</p>
     <div v-if="!planilhaAtiva" class="alert alert-warning small py-2" role="status">
@@ -39,5 +43,6 @@ async function entrar() {
     <p class="small text-center mt-3 mb-0">
       Quer usar em viagens, festas ou por mês? <RouterLink to="/interesse" class="link-escuro">Entre na lista de interessados</RouterLink>
     </p>
+  </div>
   </div>
 </template>

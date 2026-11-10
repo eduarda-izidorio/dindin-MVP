@@ -30,7 +30,11 @@ async function enviar() {
 }
 </script>
 <template>
-  <div class="cartao mx-auto mt-4" style="max-width:460px">
+  <div class="mx-auto mt-4" style="max-width:460px">
+    <RouterLink to="/" class="link-escuro small text-decoration-none d-inline-block mb-2">
+      <i class="bi bi-arrow-left" aria-hidden="true"></i> Voltar para o início
+    </RouterLink>
+  <div class="cartao">
     <template v-if="ok">
       <h1 class="h4"><i class="bi bi-check-circle positivo"></i> Obrigado, {{ f.nome.split(' ')[0] }}!</h1>
       <p>Avisaremos você assim que viagens, festas e o controle por mês estiverem disponíveis.</p>
@@ -66,6 +70,7 @@ async function enviar() {
       <p v-if="erro" class="negativo small" role="alert">{{ erro }}</p>
       <button class="btn btn-dindin w-100" :disabled="enviando">{{ enviando ? 'Enviando...' : 'Quero ser avisado' }}</button>
     </form>
+  </div>
   </div>
 </template>
 
