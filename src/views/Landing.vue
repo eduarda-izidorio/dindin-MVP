@@ -5,7 +5,7 @@ const ctaDemo = app.usuario ? '/grupos' : '/login'
 
 const passos = [
   { icone: 'bi-people', titulo: 'Crie um grupo', texto: 'Casa, república ou viagem: adicione quem divide as contas com você.' },
-  { icone: 'bi-receipt', titulo: 'Lance as despesas', texto: 'Informe quem pagou e como dividir. Contas fixas entram sozinhas todo mês.' },
+  { icone: 'bi-receipt', titulo: 'Lance as despesas', texto: 'Informe quem pagou e como dividir. Contas fixas são lançadas com um clique todo mês.' },
   { icone: 'bi-arrow-left-right', titulo: 'Acerte as contas', texto: 'O Dindin calcula o menor número de transferências para zerar tudo.' },
 ]
 const recursos = [
@@ -49,7 +49,7 @@ const brl = (v) => v.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL
             </p>
             <div class="d-flex flex-column flex-sm-row gap-2">
               <RouterLink :to="ctaDemo" class="btn btn-dindin btn-lg px-4">Testar a demo grátis</RouterLink>
-              <a href="#como-funciona" class="btn btn-outline-dark btn-lg px-4">Como funciona</a>
+              <RouterLink to="/como-funciona" class="btn btn-outline-dark btn-lg px-4">Como funciona</RouterLink>
             </div>
           </div>
           <div class="col-lg-6">
@@ -92,6 +92,9 @@ const brl = (v) => v.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL
               <p class="mb-0">{{ p.texto }}</p>
             </div>
           </div>
+        </div>
+        <div class="text-center mt-4">
+          <RouterLink to="/como-funciona" class="link-escuro">Ver o passo a passo completo <i class="bi bi-arrow-right" aria-hidden="true"></i></RouterLink>
         </div>
       </div>
     </section>
