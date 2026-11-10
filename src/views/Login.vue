@@ -13,12 +13,12 @@ async function entrar() {
   try { await registrar('visitantes', dados) } catch (e) { console.error(e) }
   enviando.value = false
   app.entrar(dados.nome, dados.email)
-  router.push('/')
+  router.push('/grupos')
 }
 </script>
 <template>
   <div class="cartao mx-auto mt-5" style="max-width:400px">
-    <h1 class="h3"><RouterLink to="/inicio" class="link-escuro text-decoration-none">Dindin</RouterLink></h1>
+    <h1 class="h3"><RouterLink to="/" class="link-escuro text-decoration-none">Dindin</RouterLink></h1>
     <p>Divida as contas da casa, da república ou da viagem sem planilha.</p>
     <div v-if="!planilhaAtiva" class="alert alert-warning small py-2" role="status">
       Modo teste: a planilha não está configurada (falta o <code>.env.local</code>). Os cadastros ficam só neste navegador.

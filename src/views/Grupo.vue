@@ -16,5 +16,5 @@ const g = computed(() => app.grupo(route.params.id))
     </nav>
     <RouterView />
   </div>
-  <p v-else>Grupo não encontrado. <RouterLink to="/">Voltar</RouterLink></p>
+  <p v-else>Grupo não encontrado. <RouterLink to="/grupos">Voltar</RouterLink></p>
 </template>

@@ -34,7 +34,7 @@ async function enviar() {
     <template v-if="ok">
       <h1 class="h4"><i class="bi bi-check-circle positivo"></i> Obrigado, {{ f.nome.split(' ')[0] }}!</h1>
       <p>Avisaremos você assim que viagens, festas e o controle por mês estiverem disponíveis.</p>
-      <RouterLink :to="app.usuario ? '/' : '/login'" class="btn btn-dindin">Voltar para a demo</RouterLink>
+      <RouterLink :to="app.usuario ? '/grupos' : '/login'" class="btn btn-dindin">Voltar para a demo</RouterLink>
     </template>
     <form v-else @submit.prevent="enviar">
       <h1 class="h4">Lista de interessados</h1>

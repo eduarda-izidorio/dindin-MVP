@@ -7,7 +7,7 @@ const sair = () => { app.sair(); router.push('/login') }
 <template>
   <header v-if="app.usuario && !route.meta.cheia" class="topo py-3">
     <div class="container d-flex justify-content-between align-items-center">
-      <RouterLink to="/" class="text-white text-decoration-none fs-4 fw-bold"><i class="bi bi-piggy-bank"></i> Dindin</RouterLink>
+      <RouterLink to="/grupos" class="text-white text-decoration-none fs-4 fw-bold"><i class="bi bi-piggy-bank"></i> Dindin</RouterLink>
       <div><span class="me-3">{{ app.usuario.nome }}</span>
         <button class="btn btn-sm btn-outline-light" @click="sair">Sair</button></div>
     </div>

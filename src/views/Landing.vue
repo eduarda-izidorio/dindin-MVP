@@ -1,7 +1,7 @@
 <script setup>
 import { useApp } from '../stores/app'
 const app = useApp()
-const ctaDemo = app.usuario ? '/' : '/login'
+const ctaDemo = app.usuario ? '/grupos' : '/login'
 
 const passos = [
   { icone: 'bi-people', titulo: 'Crie um grupo', texto: 'Casa, república ou viagem: adicione quem divide as contas com você.' },
